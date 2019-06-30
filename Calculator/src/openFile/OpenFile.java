@@ -8,8 +8,13 @@ public class OpenFile {
      //text file, should be opening in default text editor
 	  try {
           Runtime rt = Runtime.getRuntime();
-
-          String command = "cmd /c cd c:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs & Wireshark.lnk -i Wi-Fi -k";
+          
+          String currentPath = System.getProperty("user.dir");
+         // System.out.println(currentPath);
+          
+          String command = "cmd /c cd" + currentPath + " & Wireshark.lnk -i Wi-Fi -k";
+          
+          //String command = "cmd /c cd c:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs & Wireshark.lnk -i Wi-Fi -k";
          // Process pr = rt.exec(command);
           rt.exec(command);
         } catch(Exception e) {

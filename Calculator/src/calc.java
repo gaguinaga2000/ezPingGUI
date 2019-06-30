@@ -42,7 +42,7 @@ public class calc {
 		Display display = Display.getDefault();
 		createContents(args);
 		//---------------------------------------------------------------
-		//set Title Icon
+		//set Title Icon //
 		InputStream image = getClass().getClassLoader().getResourceAsStream("connect2.png");
 		Image titleIcon = new Image(display, image);
 		shlPingSniff.setImage(titleIcon); 
